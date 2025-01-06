@@ -9,6 +9,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>House Price Predictor</title>
+
+    <style>
+      .source-files-btn {
+        position: fixed; 
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+      }
+
+      /* For smaller screens, adjust the size and position */
+      @media (max-width: 576px) {
+        .source-files-btn {
+          top: 10px;
+          right: 10px;
+          font-size: 14px; /* Reduce font size for small screens */
+        }
+      }
+
+      /* For medium screens and larger, the button stays in the same position */
+      @media (min-width: 577px) {
+        .source-files-btn {
+          font-size: 16px; /* Slightly larger font on medium and large screens */
+        }
+      }
+    </style>
   </head>
   <body class="bg-dark">
     
@@ -60,6 +85,9 @@
         </div>
     </div>
 
+    <!-- Button for Source Files -->
+    <a href="https://github.com/TechConquerorX/House-Price-Prediction" class="btn btn-success source-files-btn" target="_blank">Source Files</a>
+
     <script>
       function form_handler(event){
           event.preventDefault();
@@ -99,4 +127,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
- 
