@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>House Price Predictor</title>
@@ -18,19 +15,17 @@
         z-index: 9999;
       }
 
-      /* For smaller screens, adjust the size and position */
       @media (max-width: 576px) {
         .source-files-btn {
           top: 10px;
           right: 10px;
-          font-size: 14px; /* Reduce font size for small screens */
+          font-size: 14px;
         }
       }
 
-      /* For medium screens and larger, the button stays in the same position */
       @media (min-width: 577px) {
         .source-files-btn {
-          font-size: 16px; /* Slightly larger font on medium and large screens */
+          font-size: 16px;
         }
       }
     </style>
@@ -85,7 +80,6 @@
         </div>
     </div>
 
-    <!-- Button for Source Files -->
     <a href="https://github.com/TechConquerorX/House-Price-Prediction" class="btn btn-success source-files-btn" target="_blank">Source Files</a>
 
     <script>
@@ -94,17 +88,15 @@
       }
 
       function send_data(event){
-          event.preventDefault();  // Prevent the form from submitting
+          event.preventDefault();  
 
-          var fd = new FormData(document.querySelector('form'));  // Correct the reference to 'form'
+          var fd = new FormData(document.querySelector('form'));  
 
           var xhr = new XMLHttpRequest();
           xhr.open('POST', '/predict', true);
 
-          // Show "Wait Predicting Price!" message while waiting for the prediction
           document.getElementById('prediction').innerHTML = "Wait Predicting Price!...";
 
-          // Handle the response when done
           xhr.onreadystatechange = function() {
             if(xhr.readyState == XMLHttpRequest.DONE) {
               if (xhr.status == 200) {
